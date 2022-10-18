@@ -1,0 +1,16 @@
+$ echo "# git-practice" >> README.md
+$ git init
+$ git add README.md
+$ git commit -m "first commit"
+$ git branch -M main
+$ git remote add origin https://github.com/SOYOUNCHUN/git-practice.git
+$ git push -u origin main
+
+$ git remote add origin https://github.com/SOYOUNCHUN/git-practice.git
+$ git remote -v
+orgin https://github.com/SOYOUNCHUN/git-practice.git (fetch)
+orgin https://github.com/SOYOUNCHUN/git-practice.git (push)
+
+$ git push -u origin main
+Usename for 'https://github.com': SOYOUNCHUN
+Password for 'https://SOYOUNCHUN@github.com': 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
