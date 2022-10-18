@@ -1,0 +1,35 @@
+# **Today's lecture summary**
+## **Git command**
+### version control(essential to use)
+#### changes vs snapshots
+- changes: storing data as changes to the base version(제일 초기의 데이터에 덮어씀, 쌓인 변화를 누적하는 방식) 
+- ***snapshots***: sotring data as snapshots(각각의 버전에서 그 파일 전체의 수정 상황을 snapshot로 저장하는 방식)
+### Local, Centralized, and Distributed Version Control
+- Local: 개인 컴퓨터 안에서만 (단점:협업이 어려움)
+- Centralized: 여러 버전을 가진 중앙 서버를 이용 (단점:중앙 서버가 다운되면 문제가 발생)
+- ***Distributed***: 중앙 서버 외에도 개인 컴퓨터에도 전체 복사본을 가짐(개발자들이 각각 개발하고 merge 가능)
+> Three states in Git: Modified, Staged, Commited
+---
+### Git config: First-time setup
+- ***system level, global level, local level*** (이전 level에 계속 덮어쓰는 방식)
+- **ex)** $ git con fig --list -- show-origin
+- **ex)** $ git config -- global user.name "soyoun chun"(정보 입력)
+---
+### Git command
+1. **$ git init**:Initializing a Repository in an Existing Directory (설정이 끝난 후 하나의 directory를 만드는 것)
+-**ex)** $ git init
+2. **$ git status**:Checking Repository Status
+-**ex)** $ git status
+3.  **$ git add [file_name]**: Adding a new file to be staged (tracked) (stage area에 올리고 싶을때)
+-**ex)** $ git add README. md
+-**ex)** $ git add hello_world words.txt (git이 관여할 수 있는 두 개의 파일 추가)
+-**ex)** $ nano words.txt (changes not stagged for commit 부분에 파일이 생기지만 이 상태 그대로 commit시에는 수정된 내용 전으로 올라감)
+-**ex)** $ git add words.txt(위와 같은 내용이 수정 후로 올라가고 changes not stagged for commit 부분 발생 x)
+-**ex)** $ git add.(현재 directory 안에 있는 모든 파일을 stage area에 올림)
+4. **$ git rm –cached [file_name]**: Unstaging a file (stage area에 올라갔지만 commit 하고 싶지 않은 파일이 존재할 때)
+-**ex)** $ git rm --cached history_command.txt
+5. **$ nano .gitignore**: Ignoring a file
+6. ***$ git commit -m "commit message"**: commit (올려놓은 파일 혹은 directory를 특정 버전으로 기록하겠다. snapshot을 찍겠다)
+-**ex)** $ git commit -m "initial commit"
+7. ***$ git branch**: change branch name
+-**ex)** $ git branch -m master main (branch master를 branch main으로 바꾼다)
