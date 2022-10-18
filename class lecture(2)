@@ -1,0 +1,35 @@
+# **Today's lecture summary**
+## shell commands
+### I/O Redirection
+1. **standard output**:screen, using ">" after a command to create and save the output in a file.
+-**ex)** $ ls-lh > file_list.txt
+-***cat:distplats the content of a text file.***
+:using ">>" appends output to an extising file or creat e and write to a new file.
+-**ex)** $ ls-lh >> file_list.txt
+2. **standard input**:keyboard, using "<" to redirect input from a file
+-**ex)** $ sort < words.txt > sorted_words.txt (파일의 이름을 뒤쪽 것으로 변경하겠다.)
+---
+### pipelines "|"
+- ***pipeline***: feeds output of previous command to input of next command
+-**ex)** $ls -lh | less (앞에 있는 command의 내용을 다음에 있는 command로 그대로 가져감,)
+---
+### Expansion
+1. **echo**: print out the text
+>TIP: BLACKSLASH: ignore line change in command("enter") to enter a long command in multiple lines.
+---
+### Permissions
+- Linux is a multi-user-system.
+- files and directories have a permission assigned differently to owner/group/others.
+>changing Permissions: "chmod": changes permissions.
+>ex)$ chmod 644 words.text = 110,100,100: only the owner can read and write, but all the others can only read it.
+---
+### superuser
+- superuser has all system administation authority.
+- **"sudo"** : if you are a superuser put it befor the command
+- **ex)** $ sudo some_command (관리자 권한 설정 기능)
+---
+### shell script
+- script를 정해 놓고 명령어를 입력했을 때 자동으로 실행되게 하는 기능을 가짐
+- **ex)**: $ nano myscript.sh (내용이 비었을 때는 입력 가능, 내용이 있을 떄는 수정 가능)
+>TIP:HISTORY: see previous command history or save it to a text file.
+>ex) $ history > history_command.txt
